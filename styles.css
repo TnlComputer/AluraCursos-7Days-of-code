@@ -151,3 +151,139 @@ code {
     padding: 8px;
   }
 }
+
+/* ==== ESTILOS DEL JUEGO INTERACTIVO ==== */
+
+/* Contenedores de cada paso */
+#paso1,
+#paso2,
+#paso3,
+#paso4 {
+  background: #f4f6f9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Mostrar paso actual con animación */
+#paso1.show,
+#paso2.show,
+#paso3.show,
+#paso4.show {
+  display: block;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Labels */
+#contenido label,
+#paso1 label,
+#paso2 label,
+#paso3 label,
+#paso4 label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #2c3e50;
+}
+
+/* Selects e inputs */
+#paso1 select,
+#paso2 select,
+#paso3 select,
+#paso4 input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#paso1 select:focus,
+#paso2 select:focus,
+#paso3 select:focus,
+#paso4 input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Botones del juego */
+#paso1 button,
+#paso2 button,
+#paso3 button,
+#paso4 button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#paso1 button:hover,
+#paso2 button:hover,
+#paso3 button:hover,
+#paso4 button:hover {
+  background: #0056b3;
+  transform: scale(1.03);
+}
+
+/* Lista de tecnologías agregadas */
+#listaTec {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#listaTec li {
+  background: #e9f7ef;
+  color: #155724;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Contenedor de contenido final (resumen) */
+#contenido p {
+  background: #f0f4f8;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-left: 5px solid #28a745;
+}
+
+/* Responsive: mejorar visualización en móviles */
+@media (max-width: 500px) {
+  #paso1,
+  #paso2,
+  #paso3,
+  #paso4 {
+    padding: 15px;
+  }
+
+  #paso1 button,
+  #paso2 button,
+  #paso3 button,
+  #paso4 button {
+    width: 100%;
+    padding: 12px;
+  }
+}
