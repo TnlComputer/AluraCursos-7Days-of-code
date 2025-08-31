@@ -1,37 +1,50 @@
-let numeroUn = 1;
-let stringUn = '1';
-let numeroTreinta = 30;
-let stringTreinta = '30';
-let numeroDiez = 10;
-let stringDiez = '10';
+// RETO 2 - Comparación de valores
+document.addEventListener('DOMContentLoaded', function () {
+  const contenido = document.getElementById('contenido');
 
-let salida = '';
+  let numeroUn = 1;
+  let stringUn = '1';
+  let numeroTreinta = 30;
+  let stringTreinta = '30';
+  let numeroDiez = 10;
+  let stringDiez = '10';
 
-// Comparación de numeroUn y stringUn
-if (numeroUn === stringUn) {
-  salida += 'Las variables numeroUn y stringUn tienen el mismo valor y mismo tipo<br>';
-} else if (numeroUn == stringUn) {
-  salida += 'Las variables numeroUn y stringUn tienen el mismo valor, pero tipos diferentes<br>';
-} else {
-  salida += 'Las variables numeroUn y stringUn no tienen el mismo valor<br>';
-}
+  let resultados = '';
 
-// Comparación de numeroTreinta y stringTreinta
-if (numeroTreinta === stringTreinta) {
-  salida += 'Las variables numeroTreinta y stringTreinta tienen el mismo valor y mismo tipo<br>';
-} else if (numeroTreinta == stringTreinta) {
-  salida += 'Las variables numeroTreinta y stringTreinta tienen el mismo valor, pero tipos diferentes<br>';
-} else {
-  salida += 'Las variables numeroTreinta y stringTreinta no tienen el mismo valor<br>';
-}
+  // Comparación numeroUn y stringUn
+  if (numeroUn === stringUn) {
+    resultados += '<p>numeroUn y stringUn tienen el mismo valor y mismo tipo</p>';
+  } else if (numeroUn == stringUn) {
+    resultados += '<p>numeroUn y stringUn tienen el mismo valor, pero tipos diferentes</p>';
+  } else {
+    resultados += '<p>numeroUn y stringUn no tienen el mismo valor</p>';
+  }
 
-// Comparación de numeroDiez y stringDiez
-if (numeroDiez === stringDiez) {
-  salida += 'Las variables numeroDiez y stringDiez tienen el mismo valor y mismo tipo<br>';
-} else if (numeroDiez == stringDiez) {
-  salida += 'Las variables numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes<br>';
-} else {
-  salida += 'Las variables numeroDiez y stringDiez no tienen el mismo valor<br>';
-}
+  // Comparación numeroTreinta y stringTreinta
+  if (numeroTreinta === stringTreinta) {
+    resultados += '<p>numeroTreinta y stringTreinta tienen el mismo valor y mismo tipo</p>';
+  } else if (numeroTreinta == stringTreinta) {
+    resultados += '<p>numeroTreinta y stringTreinta tienen el mismo valor, pero tipos diferentes</p>';
+  } else {
+    resultados += '<p>numeroTreinta y stringTreinta no tienen el mismo valor</p>';
+  }
 
-document.getElementById('resultado').innerHTML = salida;
+  // Comparación numeroDiez y stringDiez
+  if (numeroDiez === stringDiez) {
+    resultados += '<p>numeroDiez y stringDiez tienen el mismo valor y mismo tipo</p>';
+  } else if (numeroDiez == stringDiez) {
+    resultados += '<p>numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes</p>';
+  } else {
+    resultados += '<p>numeroDiez y stringDiez no tienen el mismo valor</p>';
+  }
+
+  // Mostrar resultados en pantalla
+  contenido.innerHTML = resultados;
+
+  // Navegación (menu + anterior + siguiente reto)
+  const nav = document.querySelector('nav');
+  nav.innerHTML = `
+ <a href="../index.html">Volver al Menú</a>
+    <a href="../reto-2/reto-2.html">Ir al Reto 2</a>
+  `;
+});
