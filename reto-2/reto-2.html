@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reto 2</title>
+  <title>Desafío Día 2 - #7DaysOfCode</title>
+  <link rel="stylesheet" href="reto-2.css">
 </head>
 
 <body>
-  <main>
-    <h1>Reto 2</h1>
-  </main>
-  <script src="reto-2.js"></script>
+  <div class="card">
+    <h2>💻 Registro</h2>
+    <input type="text" id="nombre" placeholder="¿Cuál es tu nombre?">
+    <input type="number" id="edad" placeholder="¿Cuántos años tienes?">
+    <input type="text" id="lenguaje" placeholder="¿Qué lenguaje estás estudiando?">
+    <button onclick="mostrarMensaje()">Enviar</button>
+    <p class="resultado" id="resultado"></p>
+  </div>
+
+  <script src="reto-2.js"> </script>
 </body>
 
 </html>
