@@ -1,48 +1,29 @@
-// RETO 2 - Comparación de valores
-document.addEventListener("DOMContentLoaded", function () {
-  const contenido = document.getElementById("contenido");
+document.addEventListener('DOMContentLoaded', function () {
+  const boton = document.getElementById('btnEnviar'); // Botón para mostrar el mensaje
 
-  let numeroUn = 1;
-  let stringUn = "1";
-  let numeroTreinta = 30;
-  let stringTreinta = "30";
-  let numeroDiez = 10;
-  let stringDiez = "10";
+  boton.addEventListener('click', function () {
+    const nombre = document.getElementById('nombre').value;
+    const edad = document.getElementById('edad').value;
+    const lenguaje = document.getElementById('lenguaje').value;
 
-  let resultados = "";
+    const mensaje = `Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${lenguaje}!`;
+    document.getElementById('resultado').textContent = mensaje;
 
-  // Comparación numeroUn y stringUn
-  if (numeroUn === stringUn) {
-    resultados += "<p>numeroUn y stringUn tienen el mismo valor y mismo tipo</p>";
-  } else if (numeroUn == stringUn) {
-    resultados += "<p>numeroUn y stringUn tienen el mismo valor, pero tipos diferentes</p>";
-  } else {
-    resultados += "<p>numeroUn y stringUn no tienen el mismo valor</p>";
-  }
+    // Ejercicio opcional
+    setTimeout(() => {
+      const respuesta = prompt(`¿Te gusta estudiar ${lenguaje}? Responde con 1 para SÍ o 2 para NO.`);
+      if (respuesta == 1) {
+        document.getElementById('resultadoAlert').textContent =
+          ' 😃 ¡Muy bien! Sigue estudiando y tendrás mucho éxito.';
+      } else if (respuesta == 2) {
+        document.getElementById('resultadoAlert').textContent =
+          ' 😕 Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?';
+      }
+    }, 500);
+  });
 
-  // Comparación numeroTreinta y stringTreinta
-  if (numeroTreinta === stringTreinta) {
-    resultados += "<p>numeroTreinta y stringTreinta tienen el mismo valor y mismo tipo</p>";
-  } else if (numeroTreinta == stringTreinta) {
-    resultados += "<p>numeroTreinta y stringTreinta tienen el mismo valor, pero tipos diferentes</p>";
-  } else {
-    resultados += "<p>numeroTreinta y stringTreinta no tienen el mismo valor</p>";
-  }
-
-  // Comparación numeroDiez y stringDiez
-  if (numeroDiez === stringDiez) {
-    resultados += "<p>numeroDiez y stringDiez tienen el mismo valor y mismo tipo</p>";
-  } else if (numeroDiez == stringDiez) {
-    resultados += "<p>numeroDiez y stringDiez tienen el mismo valor, pero tipos diferentes</p>";
-  } else {
-    resultados += "<p>numeroDiez y stringDiez no tienen el mismo valor</p>";
-  }
-
-  // Mostrar resultados en pantalla
-  contenido.innerHTML = resultados;
-
-  // Navegación (menu + anterior + siguiente reto)
-  const nav = document.querySelector("nav");
+  // Navegación (menú + anterior + siguiente reto)
+  const nav = document.querySelector('nav');
   nav.innerHTML = `
     <a href="../index.html">Volver al Menú</a>
     <a href="../reto-1/reto-1.html">Anterior (Reto 1)</a>
