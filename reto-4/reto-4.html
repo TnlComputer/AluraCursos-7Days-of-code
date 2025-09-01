@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../jgm-favicon.png" type="image/png">
   <link rel="stylesheet" href="../styles.css">
-  <title>Reto 4</title>
+  <title>Reto 4 - Juego de Adivinanza</title>
 </head>
 
 <body>
@@ -14,7 +14,14 @@
     <h1>Desafío 4</h1>
 
     <section id="contenido">
-      <p>Aquí va el contenido dinámico del reto 4.</p>
+      <div class="container">
+        <h1>🎲 Adivina el número</h1>
+        <p>Estoy pensando en un número entre 0 y 10. ¡Tienes 3 intentos!</p>
+        <input type="number" id="guessInput" min="0" max="10" placeholder="Ingresa tu número">
+        <button id="guessButton">Adivinar</button>
+        <button id="resetButton">Reiniciar</button>
+        <p id="message"></p>
+      </div>
     </section>
 
     <nav>
