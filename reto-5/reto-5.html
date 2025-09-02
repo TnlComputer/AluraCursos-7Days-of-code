@@ -7,15 +7,30 @@
     <link rel="shortcut icon" href="../jgm-favicon.png" type="image/png">
 
   <link rel="stylesheet" href="../styles.css">
-  <title>Reto 5</title>
+  <title>Reto 5 - Lista de Compras</title>
 </head>
-
 <body>
   <main>
     <h1>Desafío 5</h1>
 
     <section id="contenido">
-      <p>Aquí va el contenido dinámico del reto 5.</p>
+      <h2>🛒 Lista de Compras</h2>
+      <label for="alimento">Nombre del alimento:</label>
+      <input type="text" id="alimento" placeholder="Ej: Manzana">
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria">
+        <option value="Frutas">Frutas</option>
+        <option value="Lácteos">Lácteos</option>
+        <option value="Congelados">Congelados</option>
+        <option value="Dulces">Dulces</option>
+        <option value="Otros">Otros</option>
+      </select>
+
+      <button id="agregarBtn">Agregar a la lista</button>
+      <button id="mostrarBtn">Mostrar lista</button>
+
+      <div id="resultado"></div>
     </section>
 
     <nav>
