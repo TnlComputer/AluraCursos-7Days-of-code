@@ -287,3 +287,25 @@ code {
     padding: 12px;
   }
 }
+
+/* ==== SEPARAR SELECTS DE BOTONES ==== */
+#contenido select {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px; /* más espacio que los botones */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+#contenido select:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Clase utilitaria opcional */
+.espaciado {
+  margin-bottom: 25px !important;
+}

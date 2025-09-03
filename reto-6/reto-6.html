@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../jgm-favicon.png" type="image/png">
-
+  <link rel="shortcut icon" href="../jgm-favicon.png" type="image/png">
   <link rel="stylesheet" href="../styles.css">
-  <title>Reto 6</title>
+  <title>Reto 6 - Lista de Compras con Eliminación</title>
 </head>
-
 <body>
   <main>
     <h1>Desafío 6</h1>
 
     <section id="contenido">
-      <p>Aquí va el contenido dinámico del reto 6.</p>
+      <h2>🛒 Lista de Compras (Agregar y Eliminar)</h2>
+
+      <!-- Agregar -->
+      <label for="alimento">Nombre del alimento:</label>
+      <input type="text" id="alimento" placeholder="Ej: Manzana">
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria">
+        <option value="Frutas">Frutas</option>
+        <option value="Lácteos">Lácteos</option>
+        <option value="Congelados">Congelados</option>
+        <option value="Dulces">Dulces</option>
+        <option value="Otros">Otros</option>
+      </select>
+
+      <button id="agregarBtn">Agregar a la lista</button>
+
+      <!-- Eliminar -->
+      <label for="eliminar">Eliminar alimento (escribe el nombre exacto):</label>
+      <input type="text" id="eliminar" placeholder="Ej: Manzana">
+      <button id="eliminarBtn">Eliminar de la lista</button>
+
+      <!-- Mostrar -->
+      <button id="mostrarBtn">Mostrar lista</button>
+
+      <div id="resultado"></div>
     </section>
 
     <nav>
@@ -25,7 +47,6 @@
     </nav>
   </main>
 
-  <script src="reto-6.js"></script>
+  <script src="./reto-6.js"></script>
 </body>
-
 </html>
