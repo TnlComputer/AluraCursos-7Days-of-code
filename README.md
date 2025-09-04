@@ -10,4 +10,4 @@ Realizado por Jorge Martinez
 4. Reto 4 realizado 01/09/2025
 5. Reto 5 realizado 02/09/2025
 6. Reto 6 realizado 03/09/2025
-7. Reto 7
+7. Reto 7 realizado 04/09/2025
